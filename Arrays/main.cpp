@@ -22,30 +22,41 @@ void main()
 		cout << arr[i] << tab;
 	}
 	cout << endl;
+
+
 	// вывод массива на экран в обратном порядка
 	for (int i = SIZE - 1; i >= 0; i--)
-	 {
+	{
 		cout << arr[i] << tab;
-      }
+	}
 	cout << endl;
+
+	//сдвиг массива
+
+	int buffer = arr[0];
+	for (int i = 0; i < SIZE; i++)
+	{
+		arr[i] = arr[i++];
+		arr[SIZE - 1] = buffer;
+	}
 	// вычиселение суммы элементов массива;
 	int sum = 0;
-	for(int i=0;i<SIZE;i++)
+	for (int i = 0; i < SIZE; i++)
 	{
-		sum +=arr[i];
+		sum += arr[i];
 	}
-	cout << "Сумма элементов массива:" << sum<<endl;
+	cout << "Сумма элементов массива:" << sum << endl;
 	cout << "Средне-арифиметческое:" << (double)sum / SIZE << endl;
-//Поиск минимального и максимального значения в массиве
-int min, max;
-min = max = arr[0];
-for(int i=0;i<SIZE;i++)
-{
-	if (arr[i] < min)min = arr[i];
-	if (arr[i] > max)max = arr[i];
-	
-}
-cout << "Минимальное значение в массива:" << min << endl;
-cout << "Максимальне значение в массиве:" << max << endl;
+	//Поиск минимального и максимального значения в массиве
+	int min, max;
+	min = max = arr[0];
+	for (int i = 0; i < SIZE; i++)
+	{
+		if (arr[i] < min)min = arr[i];
+		if (arr[i] > max)max = arr[i];
+
+	}
+	cout << "Минимальное значение в массива:" << min << endl;
+	cout << "Максимальне значение в массиве:" << max << endl;
 
 }
