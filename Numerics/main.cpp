@@ -1,7 +1,7 @@
 ﻿#include<iostream>
 using namespace std;
 //#define DEC_2_BIN
-#define DEC_2_HEX
+//#define DEC_2_HEX
 
 using std::cin;
 using std:: cout;
@@ -12,6 +12,7 @@ void main()
 
 {
 	setlocale(LC_ALL, "");
+	//for (int i = 0; i < 256; i++) cout << i << "\t" << (char)i << endl;   //fcrbrjl
 	int decimal; // десятичное число с клавиатуры
 	cout << "Введите десятичное число:"; cin >> decimal;
 	cout << "Numerics" << endl;
@@ -58,5 +59,24 @@ void main()
 	cout << endl;
 
 #endif // DEC_2_HEX
+
+	const int MAX_HEX_CAPACITY = 8;
+	char hex[MAX_HEX_CAPACITY] = {};
+	int i = 0;
+	for (; decimal; i++)
+	{
+		hex[i] = decimal % 16;//  получаем младший шестнадцетиричный разряд и сохраняем его
+		decimal /= 16; // убираем  младший шестнадцатеричный разряд из десятичного числа 
+	}
+	for (--i; i >= 0; i--)
+	{
+		cout << char(hex[i] < 10 ? hex[i] + '0' : hex[i] + 'A' - 10);
+		//if (hex[i] < 10)
+			//cout << (int)hex[i];
+		//else
+		//	cout << char(hex[i] + 55);
+
+	}
+	cout << endl;
 
 }
