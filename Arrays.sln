@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Numerics", "Numerics\Numeri
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shift", "HM\HM.vcxproj", "{A0C3C063-A4D1-4795-823B-B8CE65022F6E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary", "Binary\Binary.vcxproj", "{0ACDC2C5-5045-4415-9D04-FD7173FE088C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{A0C3C063-A4D1-4795-823B-B8CE65022F6E}.Release|x64.Build.0 = Release|x64
 		{A0C3C063-A4D1-4795-823B-B8CE65022F6E}.Release|x86.ActiveCfg = Release|Win32
 		{A0C3C063-A4D1-4795-823B-B8CE65022F6E}.Release|x86.Build.0 = Release|Win32
+		{0ACDC2C5-5045-4415-9D04-FD7173FE088C}.Debug|x64.ActiveCfg = Debug|x64
+		{0ACDC2C5-5045-4415-9D04-FD7173FE088C}.Debug|x64.Build.0 = Debug|x64
+		{0ACDC2C5-5045-4415-9D04-FD7173FE088C}.Debug|x86.ActiveCfg = Debug|Win32
+		{0ACDC2C5-5045-4415-9D04-FD7173FE088C}.Debug|x86.Build.0 = Debug|Win32
+		{0ACDC2C5-5045-4415-9D04-FD7173FE088C}.Release|x64.ActiveCfg = Release|x64
+		{0ACDC2C5-5045-4415-9D04-FD7173FE088C}.Release|x64.Build.0 = Release|x64
+		{0ACDC2C5-5045-4415-9D04-FD7173FE088C}.Release|x86.ActiveCfg = Release|Win32
+		{0ACDC2C5-5045-4415-9D04-FD7173FE088C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
