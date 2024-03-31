@@ -1,7 +1,8 @@
 ﻿#include<iostream>
 using namespace std;
 //#define DEC_2_BIN
-//#define DEC_2_HEX
+#define DEC_2_HEX
+//#define DEX_3_HEX
 
 using std::cin;
 using std:: cout;
@@ -17,7 +18,7 @@ void main()
 	cout << "Введите десятичное число:"; cin >> decimal;
 	cout << "Numerics" << endl;
 #ifdef DEC_2_BIN
-	const int MAX_CAPACITY = 32; // максимально возможная разрядность воичного числа
+	const int MAX_CAPACITY = 32; // максимально возможная разрядность двоичного числа
 	bool binary[MAX_CAPACITY]{}; //этот массиив будет хранить  разряды двоичнго числа
 
 	int i = 0; // номер разряда
@@ -26,15 +27,18 @@ void main()
 	//	binary[i] = decimal % 2;  //сохраняем младший разряд  числа в массиве
 	//	decimal /= 2;  //убираем младший двоичный разряд из дясетичного числа
 	//}
-	for (; decimal; decimal /= 2)binary[i++] = decimal % 2;
+	for (; decimal; decimal /= 2)
+		binary[i++] = decimal % 2;
 
-	// для получения конечного результата нужно переписать остатки от длелния
+	// для получения конечного результата нужно переписать остатки от делeния
 	// начиная с последнего результата от деления
 	for (--i; i >= 0; i--)
 	{
 		cout << binary[i];
 	}
 	cout << endl;
+
+
 #endif // DEC_2_BIN
 
 	
@@ -60,6 +64,7 @@ void main()
 
 #endif // DEC_2_HEX
 
+#ifdef DEC_3_HEX
 	const int MAX_HEX_CAPACITY = 8;
 	char hex[MAX_HEX_CAPACITY] = {};
 	int i = 0;
@@ -78,5 +83,6 @@ void main()
 
 	}
 	cout << endl;
+#endif // DEC_3_HEX
 
 }
