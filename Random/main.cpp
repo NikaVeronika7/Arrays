@@ -1,7 +1,9 @@
 #include<iostream>
 using std::cin;
 using std::cout;
+using std::cerr;
 using std::endl;
+
 
 #define tab "\t"
 
@@ -11,10 +13,22 @@ void main()
 	const int n = 5;
 	int arr[n];
 	int minRand, maxRand;
-	cout << "введиет минимальное случайное число:"; cin >> minRand;
-	cout << "введиет максимальное случайное число:"; cin >> maxRand;
+
+	do
+	{
+		system("CLS");
+		cout << "введиет минимальное случайное число:"; cin >> minRand;
+		cout << "введиет максимальное случайное число:"; cin >> maxRand;
+	if (minRand >= maxRand)
+	 {
+		cerr << "Error:¬ведено некорректное значение" << endl;
+		system("PAUSE");
+	 }
+	} while (minRand >= maxRand);
+	
 
 	//заполнение массива случайными числами
+
 	for (int i = 0; i < n; i++)
 	{
 		//arr[i] = rand()%100+50;
